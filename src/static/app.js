@@ -32,12 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
               ${
                 details.participants.length > 0
                   ? details.participants
-                      .map(
-                        (participant) =>
-                          `<li class="participant-item">${participant}</li>`
-                      )
+                      .map((participant) => {
+                        const li = document.createElement("li");
+                        li.className = "participant-item";
+                        li.textContent = participant;
+                        return li.outerHTML;
+                      })
                       .join("")
-                  : `<li class="participant-item no-participants">No participants yet</li>`
+                  : (() => {
+                      const li = document.createElement("li");
+                      li.className = "participant-item no-participants";
+                      li.textContent = "No participants yet";
+                      return li.outerHTML;
+                    })()
               }
             </ul>
           </div>
