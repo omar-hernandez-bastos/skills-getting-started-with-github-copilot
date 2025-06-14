@@ -147,7 +147,7 @@ footer {
 .participants-section {
   margin-top: 15px;
   padding: 12px 15px;
-  background: #eef4fb;
+  background: var(--background-participants);
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(30, 64, 175, 0.06);
 }
