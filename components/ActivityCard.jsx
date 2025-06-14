@@ -20,8 +20,8 @@
       listStyleType: 'disc'
     }}>
       {participants && participants.length > 0 ? (
-        participants.map((name, idx) => (
-          <li key={idx} style={{
+        participants.map((name) => (
+          <li key={name} style={{
             marginBottom: '0.25rem',
             color: '#374151',
             fontWeight: 500
